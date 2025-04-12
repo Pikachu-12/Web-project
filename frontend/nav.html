@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyWave Navigation</title>
+    <style>
+        
+        
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 280px;
+            padding: 2rem;
+            width: calc(100% - 280px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 240px;
+            }
+            .main-content {
+                margin-left: 240px;
+                width: calc(100% - 240px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 0;
+                padding: 0;
+                visibility: hidden;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        /* Sidebar Styles */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background-color: #F8EDEB;
+            color: #6C5B7B;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFB6B9;
+        }
+        
+        .nav-category {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            padding-left: 10px;
+            color: #3d67a5;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #6C5B7B;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-item:hover, .nav-item.active {
+            background-color: #a8d8ea;;
+        }
+        
+        .nav-icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">StudyWave</div>
+            <nav>
+                <!-- Dashboard Section -->
+                <div class="nav-category">Overview</div>
+                <a href="index.html" class="nav-item" id="nav-dashboard"><span class="nav-icon">📊</span> Dashboard</a>
+                <a href="academic_progress.html" class="nav-item" id="nav-academic-progress"><span class="nav-icon">📈</span>Academic Progress</a>
+                <a href="calendar.html" class="nav-item" id="nav-calendar"><span class="nav-icon">📅</span>Calendar</a>
+    
+                <!-- Academic Tools -->
+                <div class="nav-category">Academic Tools</div>
+                <a href="course.html" class="nav-item" id="nav-courses"><span class="nav-icon">📚</span> Courses</a>
+                <a href="exam_and_assignment_tracker.html" class="nav-item" id="nav-exams"><span class="nav-icon">📖</span> Exams and Assignments</a>
+                <a href="notes.html" class="nav-item" id="nav-notes"><span class="nav-icon">📝</span> Notes</a>
+                <a href="gpa_calc.html" class="nav-item" id="nav-gpa"><span class="nav-icon">🧮</span> GPA Calculator</a>
+    
+                <!-- Study Tools -->
+                <div class="nav-category">Study Tools</div>
+                <a href="timer.html" class="nav-item" id="nav-timer"><span class="nav-icon">⏳</span> Timer</a>
+                <a href="flashcard.html" class="nav-item" id="nav-flashcards"><span class="nav-icon">🃏</span> Flashcards</a>
+                <a href="mind_map.html" class="nav-item" id="nav-mindmap"><span class="nav-icon">🧠🗺️</span> Mind map</a>
+                <a href="task_manager.html" class="nav-item" id="nav-task-manager"><span class="nav-icon">✅</span> Task Manager</a>
+                <a href="study_and_chill.html" class="nav-item" id="nav-study-chill"><span class="nav-icon">🎶☕</span>Study and Chill</a>
+                <a href="study_reflection.html" class="nav-item" id="nav-study-reflection"><span class="nav-icon">📝</span>Study Reflection</a>
+                <a href="vision_board.html" class="nav-item" id="nav-vision-board"><span class="nav-icon">🖍️📌</span>Interactive Vision Board</a>
+
+                <!--Mental Wellbeing-->
+                <div class="nav-category">Mental Wellbeing</div>
+                <a href="mood_tracker.html" class="nav-item" id="nav-mood-tracker"><span class="nav-icon">🙂</span>Mood Tracker</a>
+
+                <!-- Progress & Goals -->
+                <div class="nav-category">Progress & Goals</div>
+                <a href="goal_setter.html" class="nav-item" id="nav-goal-setter"><span class="nav-icon">🎯</span> Goal Setter</a>
+                <a href="achievements.html" class="nav-item" id="nav-achievements"><span class="nav-icon">🏆</span> Achievements</a>
+    
+                <!-- Social -->
+                <div class="nav-category">Social</div>
+                <a href="collaborative_study_groups.html" class="nav-item" id="nav-study-groups"><span class="nav-icon">👥</span> Study Groups</a>
+                <a href="peer_mentorship.html" class="nav-item" id="nav-peer-mentorship"><span class="nav-icon">🤝</span> Peer Mentorship</a>
+    
+                <!-- Settings -->
+                <div class="nav-category">Settings</div>
+                <a href="preferences.html" class="nav-item" id="nav-preferences"><span class="nav-icon">⚙️</span> Preferences</a>
+                <a href="profile.html" class="nav-item" id="nav-profile"><span class="nav-icon">👤</span> Profile</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Your page content goes here -->
+        </main>
+    </div>
+
+    <script>
+        // Script to set active navigation item based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the current page filename
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Remove active class from all nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to current page's nav item
+            const navLinks = document.querySelectorAll('.nav-item');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
